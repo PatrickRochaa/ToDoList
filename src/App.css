@@ -1,0 +1,75 @@
+.container {
+  max-width: 720px;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid black;
+  margin-top: 50px;
+}
+
+h1 {
+  margin: 15px 0;
+}
+
+.pesquisa {
+  display: flex;
+  gap: 10px;
+}
+
+.pesquisa input,
+.pesquisa button {
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 0 14px;
+  margin-bottom: 16px;
+}
+.pesquisa button {
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #00b63e;
+  background-color: #00b63e;
+}
+
+section {
+  width: 100%;
+  padding: 10px;
+  display: inline-flex;
+}
+
+ul {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid red;
+  display: flex;
+}
+
+h2 {
+  width: 95%;
+}
+
+li {
+  display: inline-flex;
+  text-align: left;
+  font-size: 20px;
+  list-style: circle;
+  width: 65%;
+}
+
+.button {
+  display: flex;
+  width: 30%;
+}
+
+.icons {
+  color: #000;
+  border: 1px dashed #000;
+  margin-right: 15px;
+  cursor: pointer;
+  background-color: transparent;
+}
