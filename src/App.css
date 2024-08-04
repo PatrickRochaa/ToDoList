@@ -74,3 +74,13 @@ li {
   cursor: pointer;
   background-color: transparent;
 }
+
+@media (width < 500px) {
+  li {
+    width: 50%;
+  }
+
+  .button {
+    width: 30%;
+  }
+}
