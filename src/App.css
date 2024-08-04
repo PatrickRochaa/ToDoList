@@ -47,6 +47,7 @@ ul {
   padding: 10px;
   border: 1px solid red;
   display: flex;
+  align-items: center;
 }
 
 h2 {

@@ -135,10 +135,12 @@ function App() {
                   }}
                 >
                   <FiEdit size={18} />
+                  <span>Editar</span>
                 </button>
 
                 <button className="icons" onClick={() => handleDelete(item)}>
                   <FiTrash size={18} />
+                  <span>Excluir</span>
                 </button>
               </div>
             </ul>
