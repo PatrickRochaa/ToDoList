@@ -45,13 +45,13 @@ h1 {
 
 section {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   display: inline-flex;
 }
 
 ul {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border: 1px solid red;
   display: flex;
   align-items: center;
@@ -63,11 +63,13 @@ h2 {
 }
 
 li {
-  display: inline-flex;
+  list-style: none;
   text-align: left;
   font-size: 20px;
-  list-style: circle;
-  width: 65%;
+  width: 60%;
+  height: auto;
+  word-break: break-all;
+  border: 1px solid blue;
 }
 
 .button {
@@ -81,6 +83,8 @@ li {
   margin-right: 15px;
   cursor: pointer;
   background-color: transparent;
+  flex-direction: column;
+  display: flex;
 }
 
 @media (width < 500px) {
@@ -90,5 +94,9 @@ li {
 
   .button {
     width: 30%;
+  }
+
+  ul {
+    padding: 0px;
   }
 }
