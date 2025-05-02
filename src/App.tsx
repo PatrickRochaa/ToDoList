@@ -14,7 +14,7 @@ function App() {
     task: "",
   });
 
-  //Salvando no localStora e exibindo na tela
+  //Buscando tarefas salvas no localStora e exibindo na tela
   useEffect(() => {
     const tarefasSalvas = localStorage.getItem("@cursoreact");
 
@@ -27,6 +27,8 @@ function App() {
   //mapeando lista de tarefa caso tenha alguma mudança
   //e salvando no localStorage quando tem alteraçao nas tarefas
   useEffect(() => {
+    //mapeando se é a primeira vez que o ciclo é iniciado
+    //caso seja firstRend seráo alterado pra false para salvar
     if (firstRend.current) {
       firstRend.current = false;
       return;
@@ -62,6 +64,7 @@ function App() {
 
   //previnindo o enviar de nova tarefa enquanto edita
   function handleSaveEdit() {
+    //achando a posiçao da tarefa
     const findTaskIndex = tasks.findIndex((tasks) => tasks === editTask.task);
 
     //clonando array de tarefas
@@ -93,7 +96,7 @@ function App() {
     });
   }
 
-  // contando quantas tarefas tem, e evitando perda de performace
+  // contando quantas tarefas tem quando tem alteraçao na dependencia(useState tasks), e evitando perda de performace
   const totalTarefas = useMemo(() => {
     return tasks.length;
   }, [tasks]);
@@ -119,8 +122,8 @@ function App() {
           {totalTarefas > 1
             ? `Você tem ${totalTarefas} tarefas....`
             : totalTarefas < 1
-            ? `Você não tem tarefa..`
-            : `Você tem ${totalTarefas} tarefa....`}
+              ? `Você não tem tarefa..`
+              : `Você tem ${totalTarefas} tarefa....`}
         </h2>
 
         {tasks.map((item) => (
